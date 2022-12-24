@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:background="@drawable/background_pic"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:orientation="vertical"
+            android:background="@color/bg">
+
+            <FrameLayout
+                android:layout_marginHorizontal="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="right"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/navpic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="저의 개인\n프로젝트입니다"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="나의 프로젝트💻"
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewProject"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+            />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

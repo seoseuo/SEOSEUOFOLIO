@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="🏠  홈"/>
+
+    <item
+        android:id="@+id/nav_seoseuo"
+        android:title="🤵  서승권이란?"/>
+
+    <item
+        android:id="@+id/nav_club"
+        android:title="🎏  학생자치기구활동"/>
+
+    <item
+        android:id="@+id/nav_study"
+        android:title="📝  학업"/>
+
+    <item
+        android:id="@+id/nav_project"
+        android:title="📟  프로젝트"/>
+
+    <item
+        android:id="@+id/nav_dm"
+        android:title="📬  문의"/>
+
+
+
+</menu>
