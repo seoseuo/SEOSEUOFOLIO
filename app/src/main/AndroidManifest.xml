@@ -16,16 +16,20 @@
         android:theme="@style/Theme.SEOSEUOFOLIO"
         tools:targetApi="31">
         <activity
+            android:name=".ProjectEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProjectAddActivity"
+            android:exported="false" />
+        <activity
             android:name=".DmAddActivity"
             android:exported="false" />
         <activity
             android:name=".DmMainActivity"
             android:exported="false" />
-
-        <activity android:name=".ProjectMainActivity"
-            android:exported="false">
-        </activity>
-
+        <activity
+            android:name=".ProjectMainActivity"
+            android:exported="false" />
         <activity
             android:name=".CouncilMainActivity"
             android:exported="false" />

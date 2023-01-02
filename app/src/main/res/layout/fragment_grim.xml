@@ -38,6 +38,7 @@
 
         </LinearLayout>
 
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerviewGrim"
             android:layout_width="match_parent"
@@ -45,11 +46,6 @@
             android:layout_weight="1"
             app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
             />
-
-
-
-
-
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
 

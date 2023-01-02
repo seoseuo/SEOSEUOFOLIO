@@ -47,7 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="\n이 곳은 개발자에게 자유롭게\n의견을 적을 수 있는게시판 겸 방명록 입니다.\n사용하면서 발생한 에러나 오류를 작성해주시면\n개발자에게 큰 도움이 됩니다."
+                    android:text="\n이 곳은 개발자에게 의견을 보낼 수 있는\n게시판 겸 방명록 입니다.\n사용하면서 발생한 에러나 오류를\n작성 및 이메일로 전송해주시면\n개발자에게 큰 도움이 됩니다."
                     android:textColor="@color/white"
                     android:textSize="15dp"
                     android:layout_marginTop="150dp"
@@ -73,6 +73,63 @@
                 android:layout_height="1dp"
                 android:background="@color/black"/>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/email"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#777DA1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:text="이메일"/>
+
+                <Button
+                    android:id="@+id/add"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#777DA1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:text="추가"/>
+
+                <Button
+                    android:id="@+id/del"
+                    android:layout_width="90dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#777DA1"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:text="삭제"/>
+
+            </LinearLayout>
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                >-->
+
+<!--                <TextView-->
+<!--                    android:layout_marginHorizontal="10dp"-->
+
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="40dp"-->
+
+<!--                    android:textSize="30dp"-->
+<!--                    android:gravity="center"-->
+
+<!--                    android:autoLink="email"-->
+<!--                    android:text="seoseuo@naver.com"-->
+<!--                    android:textColor="#00000000"-->
+<!--                    android:background=""/>-->
+
+
+<!--            </FrameLayout>-->
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerviewDm"
                 android:layout_width="match_parent"
@@ -80,37 +137,6 @@
                 android:layout_weight="1"
                 app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
                 />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:gravity="center_horizontal">
-
-                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                    android:id="@+id/add"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    app:icon="@android:drawable/ic_input_add"
-                    android:text="추가"
-                    android:layout_gravity="bottom|right"
-                    android:layout_marginRight="20dp"
-                    />
-
-                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:icon="@android:drawable/ic_input_delete"
-                    android:text="삭제"
-                    android:layout_gravity="bottom|right"
-                    android:id="@+id/del"
-                    android:layout_marginRight="20dp"
-                    />
-
-            </LinearLayout>
-
 
 
         </LinearLayout>

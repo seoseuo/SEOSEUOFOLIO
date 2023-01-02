@@ -46,6 +46,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.databinding:compiler:3.2.0-alpha11'
 
     testImplementation 'junit:junit:4.13.2'
 
@@ -57,7 +58,7 @@ dependencies {
 
     testImplementation 'junit:junit:4.13.2'
 
-
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 
     implementation 'com.airbnb.android:lottie:5.2.0'
 

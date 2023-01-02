@@ -1,21 +1,31 @@
 package kr.ac.hallym.seoseuofolio
 
 import android.content.Intent
-import android.net.Uri
+import android.content.Intent.getIntent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import kr.ac.hallym.seoseuofolio.databinding.ActivityProjectMainBinding
 import kr.ac.hallym.seoseuofolio.databinding.FragmentProjectBinding
 
 
 class ProjectFragment : Fragment() {
     lateinit var binding: FragmentProjectBinding
+
+    lateinit var adapter: ProjectAdapter
+    lateinit var adapter2: Project2Adapter
+
+    var image : MutableList<Int>? = null
+    var title : MutableList<String>? = null
+    var detail : MutableList<String>? = null
+    var link : MutableList<String>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +41,7 @@ class ProjectFragment : Fragment() {
 
         val binding = FragmentProjectBinding.inflate(inflater,container,false)
 
+        //-----------------------------------------------------------------------------------
         val contents1 = mutableListOf<Int>(
             R.drawable.calcurproject,
             R.drawable.seoseuolog,
@@ -38,7 +49,7 @@ class ProjectFragment : Fragment() {
             R.drawable.imbeproject,
         )
 
-        val intent = Intent(Intent.ACTION_VIEW)
+
 
         val contents2 = mutableListOf<String>("간단한 사칙연산 계산기","웹 프로젝트 SEOSEUOLOG","인터넷 신문 '서승일보'","무인 화재 경보 시스템")
         val contents3 = mutableListOf<String>(
@@ -48,27 +59,76 @@ class ProjectFragment : Fragment() {
             "Coap서버와 라즈베리파이, 온습도계 센서, 부저, led,lcd 모듈로 구현한 무인 점포를 주 클라이언트로 하는 무인 화재 경보 임베디드 시스템입니다. 이 시스템은 장치에 달린 온습도계 센서가 화재 시 발생 온도 이상을 감지하면 Gui Client를 통해 USER에게 상황 인지 및 조치 유도를 할 수 있습니다."
             )
 
+        val contents4 = mutableListOf<String>("https://github.com/seoseuo/arithmetic_calculator","https://github.com/seoseuo/SEOSEUOLOG","https://github.com/seoseuo/NEWS_webpage","https://github.com/seoseuo/-Embedded-fire-alarm-system")
+
         binding.recyclerviewProject.layoutManager = LinearLayoutManager(requireContext())
-        binding.recyclerviewProject.adapter = AbleAdapter(contents1,contents2,contents3)
+        binding.recyclerviewProject.adapter = ProjectAdapter(contents1,contents2,contents3, contents4)
         binding.recyclerviewProject.addItemDecoration(
             DividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
         )
 
 
 
-//
-//        var intent2 = Intent(requireContext(),FragmentProjectBinding::class.java)   // 어답터에서 보낸 인텐트 받아오기
-//        var uri : String = intent2.getStringExtra("link").toString()
-//
-//        if (uri=="no") {
-//            Toast.makeText(requireContext(), "링크가 없습니다.", Toast.LENGTH_SHORT).show()
-//        }
-//        else {
-//            intent2.setData(Uri.parse(uri))
-//            startActivity(intent2) //값 옮겨넘어가기
-//        }
 
-        // Inflate the layout for this fragment
+
+//        sqite부분 시작
+
+        val requestLauncher : ActivityResultLauncher<Intent> = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()) {
+
+            it.data?.getIntExtra("image",0)?.let {
+                image?.add(it)
+                adapter2.notifyDataSetChanged()
+            }
+            it.data?.getStringExtra("title")?.let {
+                title?.add(it)
+                adapter2.notifyDataSetChanged()
+            }
+            it.data?.getStringExtra("detail")?.let {
+                detail?.add(it)
+                adapter2.notifyDataSetChanged()
+            }
+
+            it.data?.getStringExtra("link")?.let {
+                link?.add(it)
+                adapter2.notifyDataSetChanged()
+            }
+        }
+
+        //add 버튼 눌렀을 때 추가하는 화면으로 넘어가는 뷰
+        binding.addProject.setOnClickListener {
+            val intent = Intent(requireContext(),ProjectAddActivity::class.java)
+            requestLauncher.launch(intent)
+        }
+
+        //뷰에 데이터값 꺼내와서 쏴주는
+        image = mutableListOf<Int>()
+        title = mutableListOf<String>()
+        detail = mutableListOf<String>()
+        link = mutableListOf<String>()
+
+        val db = ProjectDBHelper(requireContext()).readableDatabase
+        val cursor = db.rawQuery("select * from PRO_TB",null)
+        cursor.run {
+
+            while(moveToNext()) {
+                image?.add(cursor.getInt(1))
+                title?.add(cursor.getString(2))
+                detail?.add(cursor.getString(3))
+                link?.add(cursor.getString(4))
+            }
+        }
+
+        //sqlite로 받아온 값을 두번째 리사이클러뷰에 넣어주기 위한 어답터 초기화
+        val layoutManager = LinearLayoutManager(requireContext())
+
+        binding.recyclerviewProject2.layoutManager = layoutManager
+        adapter2 = Project2Adapter(image,title,detail,link)
+        binding.recyclerviewProject2.adapter = adapter2
+        binding.recyclerviewProject2.addItemDecoration(
+            DividerItemDecoration(requireContext(),LinearLayoutManager.VERTICAL)
+        )
+
         return binding.root
     }
 }

@@ -5,12 +5,16 @@
       <map>
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1605" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/drawable/ic_launcher_background.xml" value="0.112" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_able_add.xml" value="0.2269021739130435" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_contact_main.xml" value="0.16979166666666667" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_council_main.xml" value="0.16666666666666666" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_dm_add.xml" value="0.2" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_dm_main.xml" value="0.264" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_drawer.xml" value="0.1" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_grim_add.xml" value="0.1" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_project_add.xml" value="0.15104166666666666" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_project_edit.xml" value="0.22239583333333332" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_project_main.xml" value="0.10486322188449848" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_seo_main.xml" value="0.2" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_splash.xml" value="0.1" />
@@ -19,16 +23,18 @@
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_test.xml" value="0.152" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/activity_test2.xml" value="0.1" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/content_contact_main.xml" value="0.215625" />
-        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/council_card_view.xml" value="0.2" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/council_add.xml" value="0.2269021739130435" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/council_card_view.xml" value="0.1" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/council_edit.xml" value="0.16197916666666667" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_able.xml" value="0.16666666666666666" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_contact.xml" value="0.16979166666666667" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_defy.xml" value="0.264" />
-        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_dm.xml" value="0.1" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_dm.xml" value="0.4" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_first.xml" value="0.215625" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_grim.xml" value="0.2006340579710145" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_hall.xml" value="0.16666666666666666" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_main.xml" value="0.264" />
-        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_project.xml" value="0.215625" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_project.xml" value="0.2017167381974249" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_second.xml" value="0.215625" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_seo.xml" value="0.2" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/fragment_study_one.xml" value="0.25" />
@@ -37,6 +43,7 @@
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/item_recycler_ex.xml" value="0.25364583333333335" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/item_recyclerview.xml" value="0.2" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/navigtion_header.xml" value="0.2" />
+        <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/project_card_view.xml" value="0.1875" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/projects_card_view.xml" value="0.33936022253129344" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/seo_card_layout.xml" value="0.1" />
         <entry key="..\:/mobp20185249/SEOSEUOFOLIO/app/src/main/res/layout/seo_card_view.xml" value="0.21784420289855072" />

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
@@ -13,6 +14,7 @@ import kr.ac.hallym.seoseuofolio.databinding.ActivityTestBinding
 
 
 class TestActivity : AppCompatActivity() , OnNavigationItemSelectedListener {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +35,7 @@ class TestActivity : AppCompatActivity() , OnNavigationItemSelectedListener {
 
         //버튼 클릭 링크 이동
         binding.notion.setOnClickListener {
-            val MyIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.notion.so/22-2-fb98dfd77d324ee7adca3882c4466b74"))
+            val MyIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://chivalrous-saffron-326.notion.site/SEOSEUOFOLIO-67fb1bc68d0145edacba6979ef0fcd18"))
             startActivity(MyIntent)
         }
 
@@ -41,6 +43,7 @@ class TestActivity : AppCompatActivity() , OnNavigationItemSelectedListener {
             val MyIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/seoseuo/SEOSEUOFOLIO"))
             startActivity(MyIntent)
         }
+
 
 
     }

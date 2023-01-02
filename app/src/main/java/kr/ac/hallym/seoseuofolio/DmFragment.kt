@@ -44,16 +44,31 @@ class DmFragment : Fragment() {
                 adapter.notifyDataSetChanged()
             }
         }
+        //이메일 버튼 눌렀을 때
+
+        binding.email.setOnClickListener {
+            val email = Intent(Intent.ACTION_SEND)
+            email.type = "plain/text"
+            // email setting 배열로 해놔서 복수 발송 가능
+            // email setting 배열로 해놔서 복수 발송 가능
+            val address = arrayOf("seoseuo@naver.com")
+            email.putExtra(Intent.EXTRA_EMAIL, address)
+            email.putExtra(Intent.EXTRA_SUBJECT, "제목을 작성해주세요")
+            email.putExtra(Intent.EXTRA_TEXT, "")
+            startActivity(email)
+        }
+
 
         //자꾸 타이틀로 리사이클러뷰가 갱신됌 ㅜㅜ
 
 
-        //추가하는 메소드드
+        //add 버튼 눌렀을 때 추가하는 화면으로 넘어가는 뷰
        binding.add.setOnClickListener {
             val intent = Intent(requireContext(),DmAddActivity::class.java)
             requestLauncher.launch(intent)
         }
 
+        //뷰에 데이터값 꺼내와서 쏴주는
         title = mutableListOf<String>()
         detail = mutableListOf<String>()
 
@@ -66,6 +81,8 @@ class DmFragment : Fragment() {
                 detail?.add(cursor.getString(2))
             }
         }
+
+
 
         //마지막 행 값 삭제하기 ★★★★★★★
         binding.del.setOnClickListener {

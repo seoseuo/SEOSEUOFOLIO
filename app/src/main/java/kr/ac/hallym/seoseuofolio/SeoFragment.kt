@@ -27,7 +27,7 @@ class SeoFragment : Fragment() {
         val contents2 = mutableListOf<String>() //작은글씨 -> 내용 약력
 
         contents1.add("주요이력\uD83D\uDD0D")
-        contents2.add("★★★★★")
+        contents2.add("저의 이력들 중 중요하다고 생각도는 것들을 모아보았습니다.")
 
         contents1.add("\uD83C\uDFC6수상내역\uD83C\uDFC6")
         contents2.add("2021 2-2 학기우등 (4.32)\n2022 3-1 학기우등 (4.3)")
@@ -36,9 +36,9 @@ class SeoFragment : Fragment() {
         contents2.add("2021 2-2\n" +
                 "[특강] 오픈소스SW 라이선스 교육 이수\n" +
                 "[SW Week 대회] GitHub 이력서 콘테스트 해커톤 참여\n" +
-                "소융인의 날 - 소융대 도전골든벨 참여\n" +
+                "소융인의 날 - 소융대 도전골든벨 참여\n\n" +
                 "2022 3-1\n" +
-                "학술동아리 [노네임] 자바프로그래밍I 멘토링 진행\n" +
+                "학술동아리 [노네임] 자바프로그래밍I 멘토링 진행\n\n" +
                 "2022 3-2\n" +
                 "개인 멘토링 자바프로그래밍I 멘토링 진행\n" +
                 "[특강] (주)소이넷★ AI엔진 개발 특강\n" +
@@ -47,10 +47,10 @@ class SeoFragment : Fragment() {
 
         contents1.add("\uD83D\uDC68\u200D\uD83D\uDCBB교내외 및 자치활동\uD83D\uDC69\u200D\uD83D\uDCBB")
         contents2.add("2021 2-2\n" +
-                "총학생회후보 선거본부 [H-all] 선거운동원\n" +
+                "총학생회후보 선거본부 [H-all] 선거운동원\n\n" +
                 "2022 3-1\n" +
                 "정보과학대학 학생자치기구 [A:BLE] 체육부장\n" +
-                "과 축구동아리 [DEFY] 부회장\n" +
+                "과 축구동아리 [DEFY] 부회장\n\n" +
                 "2022 3-2\n" +
                 "한림대학교 대동제 축제준비위원회 무대팀원\n"+
                 "23년도 정과대학생회후보 선거본부 [SEASON] 선거본부장")
@@ -103,15 +103,12 @@ class SeoFragment : Fragment() {
         contents1.add("자격증\uD83D\uDCB3")
         contents2.add("열심히 준비하여 늘릴 것 입니다.")
 
-        contents1.add("운전면허")
-        contents2.add("2종 보통")
+        contents1.add("국가 자격증")
+        contents2.add("운전면허 - 2종 보통")
 
 
-        contents1.add("MOS Word")
-        contents2.add("Expert")
-
-        contents1.add("MOS Excel")
-        contents2.add("Expert")
+        contents1.add("MOS")
+        contents2.add("Word-Expert\nExcel-Expert")
 
         //프레그먼트에서 context 접근 할 때 requireContext()를 사용해준다.
 
