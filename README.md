@@ -5,7 +5,7 @@
  ![image](https://user-images.githubusercontent.com/90320005/211271830-19b68c41-bab3-44e5-8e58-f868206f97c1.png)
 
 
- # ❔About
+ # 개요
 
 > 한림대학교 모바일 프로그래밍 & (주) 더 존 비즈온 스마트 포트폴리오 프로젝트
 
@@ -25,7 +25,7 @@
 
 ---
 
-# 💨Main Feat
+# 주요기능
 
 - `시작 화면`에서는 가운데 버튼을 클릭하면 어플리케이션으로 들어갈 수 있습니다.
 
@@ -45,13 +45,13 @@
 
 ---
 
-# 🍣Role
+# 역할
 
 > 기획 단계 (더 존 비즈온)를 제외하고 UI,UX 제작, `💨Main Feat`에 작성한 모든 기능들을 도맡았습니다.
 
 ---
 
-# 🤸‍♂️Introduction
+# 소개
 
 ![슬라이드3](https://user-images.githubusercontent.com/90320005/211272100-f559c30c-c7db-4e8e-a999-a58ccaf9da41.PNG)
 ![슬라이드4](https://user-images.githubusercontent.com/90320005/211272102-3c752864-dcc8-48f7-9ad6-96d117da2380.PNG)
@@ -66,11 +66,11 @@
 - - -
 
 
-# 📹시연 영상 & 📒PROGRESS
+# 시연 영상 & 구현영상
  <a href="https://chivalrous-saffron-326.notion.site/SEOSEUOFOLIO-67fb1bc68d0145edacba6979ef0fcd18"><img src="https://img.shields.io/badge/DETAIL BIO & Progress & Video-E6E6E6?style=for-the-badge&logo=notion&logoColor=black" /></a>
  
 
-# ✒️Review
+# 후기
 **구현하지 못한 점, 아쉬운 점**
 프로젝트를 업로드 하거나, 수정할 때 이미지를 갤러리에서 꺼내와 등록 할 수 있도록 기능을 구현하려 하였지만 해당 부분에 있어 미흡한 과정이 있었고 그리하여 미처 구현하지 못하였습니다.
 ( DB 에 INSERT 하는 과정, INTENT로 사진을  형변환 시켜 데이터를 넘겨주는 과정) 
